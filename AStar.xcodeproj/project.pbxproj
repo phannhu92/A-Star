@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02C23F3F232A278500C0A58F /* OSX-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02C23F3E232A278500C0A58F /* OSX-Info.plist */; };
+		02C23F42232A29F100C0A58F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C23F41232A29F100C0A58F /* UIKit.framework */; };
+		02C23F44232A29FE00C0A58F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C23F43232A29FE00C0A58F /* Cocoa.framework */; };
 		742513631D679CCC005E198C /* AStar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 742513591D679CCC005E198C /* AStar.framework */; };
 		742513681D679CCC005E198C /* AStarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742513671D679CCC005E198C /* AStarTests.swift */; };
-		7425136A1D679CCC005E198C /* AStar.h in Headers */ = {isa = PBXBuildFile; fileRef = 7425135C1D679CCC005E198C /* AStar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7425136A1D679CCC005E198C /* OSXAStar.h in Headers */ = {isa = PBXBuildFile; fileRef = 7425135C1D679CCC005E198C /* OSXAStar.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		742513761D679D12005E198C /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742513751D679D12005E198C /* Node.swift */; };
 		742513781D69DEDC005E198C /* SortedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742513771D69DEDC005E198C /* SortedArray.swift */; };
 		7443FCF01E26D449005EA77C /* AStar.h in Headers */ = {isa = PBXBuildFile; fileRef = 7443FCEE1E26D449005EA77C /* AStar.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -28,8 +31,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02C23F3E232A278500C0A58F /* OSX-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "OSX-Info.plist"; sourceTree = "<group>"; };
+		02C23F41232A29F100C0A58F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.4.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		02C23F43232A29FE00C0A58F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		742513591D679CCC005E198C /* AStar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AStar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7425135C1D679CCC005E198C /* AStar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AStar.h; sourceTree = "<group>"; };
+		7425135C1D679CCC005E198C /* OSXAStar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OSXAStar.h; sourceTree = "<group>"; };
 		742513621D679CCC005E198C /* AStarTests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AStarTests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		742513671D679CCC005E198C /* AStarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AStarTests.swift; sourceTree = "<group>"; };
 		742513691D679CCC005E198C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02C23F44232A29FE00C0A58F /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,12 +71,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02C23F42232A29F100C0A58F /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02C23F40232A29F100C0A58F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02C23F43232A29FE00C0A58F /* Cocoa.framework */,
+				02C23F41232A29F100C0A58F /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		7425134F1D679CCC005E198C = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +96,7 @@
 				742513661D679CCC005E198C /* Tests */,
 				7443FCED1E26D449005EA77C /* AStar iOS */,
 				7425135A1D679CCC005E198C /* Products */,
+				02C23F40232A29F100C0A58F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,7 +113,8 @@
 		7425135B1D679CCC005E198C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				7425135C1D679CCC005E198C /* AStar.h */,
+				7425135C1D679CCC005E198C /* OSXAStar.h */,
+				02C23F3E232A278500C0A58F /* OSX-Info.plist */,
 				74DF855022AAA1B30051BE5D /* AStar */,
 			);
 			path = Sources;
@@ -145,7 +164,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7425136A1D679CCC005E198C /* AStar.h in Headers */,
+				7425136A1D679CCC005E198C /* OSXAStar.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +287,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02C23F3F232A278500C0A58F /* OSX-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,7 +475,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_FILE = "Sources/OSX-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devian.aStar;
@@ -478,7 +498,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = Sources/Info.plist;
+				INFOPLIST_FILE = "Sources/OSX-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.devian.aStar;
