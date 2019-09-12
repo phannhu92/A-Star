@@ -6,7 +6,7 @@
 //  Copyright © 2016 Damiaan Dufaux. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for AStar.
 FOUNDATION_EXPORT double AStarVersionNumber;

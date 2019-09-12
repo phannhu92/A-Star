@@ -90,7 +90,8 @@ Pod::Spec.new do |spec|
   #
 
   spec.source_files  = "Sources/*"
-  # spec.exclude_files = "Classes/Exclude"
+  spec.ios.exclude_files = "Sources/OSXAStar.h"
+  spec.osx.exclude_files = "AStar\ iOS/AStar.h"
 
   # spec.public_header_files = "Classes/**/*.h"
 
