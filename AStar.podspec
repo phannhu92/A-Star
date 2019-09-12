@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "AStar"
-  spec.version      = "3.1.1"
+  spec.version      = "3.1.2"
   spec.summary      = "A short description of A-Star."
 
   # This description is used to generate tags and improve search results.
@@ -89,9 +89,7 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Sources/*"
-  spec.ios.exclude_files = "Sources/OSXAStar.h"
-  spec.osx.exclude_files = "AStar\ iOS/AStar.h"
+  spec.source_files  = "Sources/AStar/*.swift"
 
   # spec.public_header_files = "Classes/**/*.h"
 
